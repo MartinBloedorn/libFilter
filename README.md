@@ -35,3 +35,12 @@ Copy the `libFilter` folder into your `libraries` folder. The following example 
       Serial.println(filteredval, 4);
       delay(5); // Loop time will approx. match the sampling time.
     }
+
+## As a regular C++ library
+
+Want to use the library outside the Arduino IDE, in a regular C++ application? You're covered.
+
+Include only the `filters.h` header, and point your `-I` path to the folder with both your `filters.h` and `filters_defs.h` headers.
+Add `filters.cpp` to your sources. 
+
+In the `filters.h` file, uncomment the `#define NOT_ARDUINO` line, and you're set.  
