@@ -42,11 +42,11 @@ public:
 #ifndef CONST_COMPILE_TIME
   Filter(); ///< Construtor vazio
 
-  void init();
+  void init(bool doFlush=true);
 
-  void setSamplingTime(float ts_) { ts = ts_; init(); }
-  void setCutoffFreqHZ(float hz_) { hz = hz_; init(); }
-  void setOrder(ORDER od_)        { od = od_; init(); }
+  void setSamplingTime(float ts_, bool doFlush=true) { ts = ts_; init(doFlush); }
+  void setCutoffFreqHZ(float hz_, bool doFlush=true) { hz = hz_; init(doFlush); }
+  void setOrder(ORDER od_, bool doFlush=true)        { od = od_; init(doFlush); }
 #endif
 
   bool isInErrorState() { return f_err;  }

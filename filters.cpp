@@ -35,8 +35,8 @@ Filter::~Filter() { }
 
 // PUBLIC METHODS * * * * * * * * * * * * * * * * * * * * *
 
-void Filter::init() {
-  flush();
+void Filter::init(bool doFlush) {
+  if(doFlush) flush();
   f_err  = false;
   f_warn = false;
 
