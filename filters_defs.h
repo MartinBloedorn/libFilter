@@ -19,25 +19,29 @@
 #ifndef FILTERS_DEFS_H
 #define FILTERS_DEFS_H
 
-#define FCUTOFF_HZ     10.0;
-#define TS_US          15000;
-#define FILTER_ORDER   1;
+// Uncomment to use `double` instead of `float` for all library functions.
+//#define LIBFILTER_USE_DOUBLE
 
-typedef float float_t;
-typedef int   int_t;
-
+#ifndef LIBFILTER_USE_DOUBLE
+	typedef float   float_t;
+	typedef int     int_t;
+#else
+	typedef double  float_t;
+	typedef int64_t int_t;
+#endif 
 
 namespace IIR {
   const uint8_t MAX_ORDER = 5;
-  enum class ORDER  : uint8_t {OD1 = 0, OD2, OD3, OD4, OD5};
+  enum class ORDER  : uint8_t {OD1 = 0, OD2, OD3, OD4};//, OD5};
+  enum class TYPE   : uint8_t {LOWPASS = 0, HIGHPASS = 1};
 
-  const float SQRT2 = sqrt(2.0);
-  const float SQRT3 = sqrt(3.0);
-  const float SQRT5 = sqrt(5.0);
+  const float_t SQRT2 = sqrt(2.0);
+  const float_t SQRT3 = sqrt(3.0);
+  const float_t SQRT5 = sqrt(5.0);
 
-  const float EPS   = 0.00001;    // Tolerancia para constantes numericasa
-  const float WEPS  = 0.00010;    // Limite para emissão de aviso de degeneração da constante
-  const float KM    = 100.0;      // Pré-multiplicador para reduzir problemas de representação numérica
+  const float_t EPS   = 0.00001;    // Tolerance for numerical constants
+  const float_t WEPS  = 0.00010;    // Warning threshold for numerical degradation
+  const float_t KM    = 100.0;      // Pre-multiplier to reduce the impact of the AVRs limited float representation
 }
 
 

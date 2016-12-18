@@ -36,11 +36,12 @@ Copy the `libFilter` folder into your `libraries` folder. The following example 
       delay(5); // Loop time will approx. match the sampling time.
     }
 
-## As a regular C++ library
-
-Want to use the library outside the Arduino IDE, in a regular C++ application? You're covered.
+### As a regular C++ library
 
 Include only the `filters.h` header, and point your `-I` path to the folder with both your `filters.h` and `filters_defs.h` headers.
-Add `filters.cpp` to your sources. 
+Add `filters.cpp` to your sources. Then, just swap out the Arduino includes and you're good.  
 
-In the `filters.h` file, uncomment the `#define NOT_ARDUINO` line, and you're set.  
+## Upcoming 
+
+- An example on notch filtering (combining a low- and a high-pass filter) 
+- Major cleanup 
