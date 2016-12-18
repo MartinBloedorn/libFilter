@@ -1,8 +1,11 @@
 # libfilter
 An Arduino-compatible C++ library for simple signal filtering. 
 
-As of this writing, the library implements low-pass filters up to the fourth order. 
-Filters are based on [normalized Butterworth polynomials](https://en.wikipedia.org/wiki/Butterworth_filter).
+This library implements low-pass filters up to the fourth order and high-pass filters up to second order. 
+Filters are based on [normalized Butterworth polynomials](https://en.wikipedia.org/wiki/Butterworth_filter). 
+Low-pass filters are discretized via pole-zero matching, while high-pass filters are discretized via a [bilinear transformation](https://en.wikipedia.org/wiki/Bilinear_transform).
+
+More info [here](http://martinvb.com/wp/minimalist-low-pass-filter-library/)!
 
 ## Using it 
 
