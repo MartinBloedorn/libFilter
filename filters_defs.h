@@ -23,11 +23,11 @@
 //#define LIBFILTER_USE_DOUBLE
 
 #ifndef LIBFILTER_USE_DOUBLE
-	typedef float   float_t;
-	typedef int     int_t;
+  typedef float   float_t;
+  typedef int     int_t;
 #else
-	typedef double  float_t;
-	typedef int64_t int_t;
+  typedef double  float_t;
+  typedef int64_t int_t;
 #endif 
 
 namespace IIR {

@@ -41,26 +41,25 @@ void Filter::init(bool doFlush) {
   f_warn = false;
 
   switch ((uint8_t)ty) {
-      case (uint8_t)TYPE::LOWPASS :
-          initLowPass();
-        break;
-      case (uint8_t)TYPE::HIGHPASS :
-          initHighPass();
-        break;
+    case (uint8_t)TYPE::LOWPASS :
+      initLowPass();
+      break;
+    case (uint8_t)TYPE::HIGHPASS :
+      initHighPass();
+      break;
   }
-
 }
 
 float_t Filter::filterIn(float input) {
   if(f_err) return 0.0;
 
   switch ((uint8_t)ty) {
-      case (uint8_t)TYPE::LOWPASS :
-          return computeLowPass(input);
-        break;
-      case (uint8_t)TYPE::HIGHPASS :
-          return computeHighPass(input);
-        break;
+    case (uint8_t)TYPE::LOWPASS :
+      return computeLowPass(input);
+      break;
+    case (uint8_t)TYPE::HIGHPASS :
+      return computeHighPass(input);
+      break;
   }
 }
 
