@@ -60,6 +60,8 @@ float_t Filter::filterIn(float input) {
     case (uint8_t)TYPE::HIGHPASS :
       return computeHighPass(input);
       break;
+    default:
+      return input;
   }
 }
 
