@@ -16,8 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef FILTERS_DEFS_H
-#define FILTERS_DEFS_H
+#pragma once
 
 // Uncomment to use `double` instead of `float` for all library functions.
 //#define LIBFILTER_USE_DOUBLE
@@ -43,7 +42,3 @@ namespace IIR {
   const float_t WEPS  = 0.00010;    // Warning threshold for numerical degradation
   const float_t KM    = 100.0;      // Pre-multiplier to reduce the impact of the AVRs limited float representation
 }
-
-
-
-#endif //FILTERS_DEFS_H

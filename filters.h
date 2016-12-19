@@ -23,8 +23,7 @@
  *        and allow everything to be shoved nicely into a single for loop (for i=0; ... i<od)
  */
 
-#ifndef FILTERS_H
-#define FILTERS_H
+#pragma once
 
 /// Has to be executed on Arduino IDE > 1.6.7
 #include <Arduino.h>
@@ -88,6 +87,3 @@ private:
    */
   inline void  initHighPass();
 };
-
-
-#endif //FILTERS_H
