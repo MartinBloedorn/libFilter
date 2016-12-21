@@ -19,12 +19,11 @@
 /** \TODO Rename low-pass filter coefficients to a more standard a0..aN, b0..bN notation.
  *  \TODO Recompute low-pass formulations with Bilinear transforms. 
  *  \TODO Put all required coefficients in vector form (a[0] instead of a0), ...
- *  \TODO Rewrite all difference equations to be in a single form. (eliminate High/Low distiction), 
+ *  \TODO Rewrite all difference equations to be in a single form. (eliminate High/Low distinction), 
  *        and allow everything to be shoved nicely into a single for loop (for i=0; ... i<od)
  */
 
-#ifndef FILTERS_H
-#define FILTERS_H
+#pragma once
 
 /// Has to be executed on Arduino IDE > 1.6.7
 #include <Arduino.h>
@@ -88,6 +87,3 @@ private:
    */
   inline void  initHighPass();
 };
-
-
-#endif //FILTERS_H

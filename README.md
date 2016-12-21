@@ -12,7 +12,7 @@ More info [here](http://martinvb.com/wp/minimalist-low-pass-filter-library/)!
 ### With Arduino
 
 Copy the `libFilter` folder into your `libraries` folder. The following example sketch is included:
-
+```cpp
     #include <filters.h>
     
     const float cutoff_freq   = 20.0;  //Cutoff frequency in Hz
@@ -38,7 +38,7 @@ Copy the `libFilter` folder into your `libraries` folder. The following example 
       Serial.println(filteredval, 4);
       delay(5); // Loop time will approx. match the sampling time.
     }
-
+```
 ### As a regular C++ library
 
 Include only the `filters.h` header, and point your `-I` path to the folder with both your `filters.h` and `filters_defs.h` headers.
