@@ -6,8 +6,8 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-Filter 				KEYWORD1
-filters				KEYWORD1
+Filter	KEYWORD1
+filters	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -20,8 +20,8 @@ filters				KEYWORD1
 # Constants (LITERAL1)
 #######################################
 
-ORDER	  			LITERAL1	Constants
-OD1					LITERAL1	Constants
-OD2					LITERAL1	Constants
-OD3					LITERAL1	Constants
-OD4					LITERAL1	Constants
+ORDER	LITERAL1	Constants
+OD1	LITERAL1	Constants
+OD2	LITERAL1	Constants
+OD3	LITERAL1	Constants
+OD4	LITERAL1	Constants
