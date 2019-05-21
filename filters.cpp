@@ -227,8 +227,8 @@ inline void  Filter::initHighPass() {
 }
 
 float_t Filter::ap(float_t p) {
-  f_err  = f_err  | (abs(p) <= EPS );
-  f_warn = f_warn | (abs(p) <= WEPS);
+  f_err  = f_err  | (abs(p) <= EPSILON );
+  f_warn = f_warn | (abs(p) <= WEPSILON);
   return (f_err) ? 0.0 : p;
 }
 

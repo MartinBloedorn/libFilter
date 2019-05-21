@@ -38,7 +38,7 @@ namespace IIR {
   const float_t SQRT3 = sqrt(3.0);
   const float_t SQRT5 = sqrt(5.0);
 
-  const float_t EPS   = 0.00001;    // Tolerance for numerical constants
-  const float_t WEPS  = 0.00010;    // Warning threshold for numerical degradation
-  const float_t KM    = 100.0;      // Pre-multiplier to reduce the impact of the AVRs limited float representation
+  const float_t EPSILON   = 0.00001;    // Tolerance for numerical constants
+  const float_t WEPSILON  = 0.00010;    // Warning threshold for numerical degradation
+  const float_t KM        = 100.0;      // Pre-multiplier to reduce the impact of the AVRs limited float representation
 }
